@@ -70,6 +70,8 @@ AND city.id = country.capital;
  -- the boarding gates. We have one chance to catch her, we just have to know where she's heading and beat her to the
  -- landing dock.
 
+-- This doesn't seem to be a clue or ask a question. 
+-- So same as #6 above, she's flying out of the Brasilia airport.
 
 
 -- Clue #8: Lucky for us, she's getting cocky. She left us a note, and I'm sure she thinks she's very clever, but
