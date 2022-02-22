@@ -48,6 +48,12 @@ AND NOT name = 'San Marino';
 -- parts of the globe! She's headed to South America as we speak; go find a city whose name is like the one we were
 -- headed to, but doesn't end the same. Find out the city, and do another search for what country it's in. Hurry!
 
+SELECT city.name, country.name, country.code 
+FROM city, country
+WHERE city.countrycode = country.code 
+AND country.code != 'SMR'
+AND city.name LIKE 'Serr%';
+-- Serra, Brazil
 
 
 -- Clue #6: We're close! Our South American agent says she just got a taxi at the airport, and is headed towards
