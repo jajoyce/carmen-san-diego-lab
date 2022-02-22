@@ -22,6 +22,15 @@ WHERE countrycode = 'VAT';
 -- to a different country, a country where people speak only the language she was learning. Find out which
 --  nearby country speaks nothing but that language.
 
+SELECT c.code, c.name, cl.language 
+FROM country c
+LEFT JOIN countrylanguage cl 
+ON c.code = cl.countrycode
+WHERE cl.language = 'Italian' 
+AND c.region = 'Southern Europe'
+AND 1 = (SELECT COUNT(language) FROM countrylanguage WHERE countrycode = c.code)
+AND c.code != 'VAT';
+-- San Marino
 
 
 -- Clue #4: We're booking the first flight out – maybe we've actually got a chance to catch her this time.
